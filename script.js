@@ -10,8 +10,7 @@ let getWeather = () => {
   let cityValue = cityVal.value;
   if (cityValue.length == 0) {
     show.innerHTML = `<h3 class="error">Please enter a city name</h3>`;
-  }
-  else {
+  } else {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${key}&units=metric`;
     cityVal.value = "";
     fetch(url)
